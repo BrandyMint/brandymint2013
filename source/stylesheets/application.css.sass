@@ -1,4 +1,62 @@
 //= require_tree .
+@import variables
+@import mixins
 @import bootstrap
 @import bootstrap-responsive
+@import fonts
 
+.index
+  background: #aaa
+  color: #fff
+
+.container
+  margin: 0 auto    
+  .top-navbar
+    margin:
+      top: 2em      
+      bottom: 5em
+    .logo
+      float: left
+      width: 70%
+      a 
+        font-size: 2em
+        color: #fff
+    .button
+      float: right
+      width: 30%
+      button
+        float: right
+        height: 24px
+        margin-top: 1px
+  .top-menu
+    margin-bottom: 2em
+    ul.menu-collapse.inline.row-fluid
+      li
+        vertical-align: bottom
+        padding:
+          top: 6pt
+          bottom: 6pt
+        line-height: 1.2
+        border-bottom: 1px solid #fff
+        a
+          color: #fff
+          display: block
+          height: 100%
+          vertical-align: bottom
+
+.wellcome
+  width: 100%
+  .big
+    font-size: 2.7em
+    line-height: 1.1    
+  .small
+    font-size: 1.4em
+    line-height: 1.4
+
+.browse_projects
+  margin:
+    top: 2em
+    bottom: 2em
+  text-align: center
+  .btn-large
+    font-size: 1em
