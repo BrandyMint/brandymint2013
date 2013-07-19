@@ -8,7 +8,7 @@
 
 # Ignore bundler config
 /.bundle
-
+.DS_Store
 # Ignore the build directory
 /build
 *~
