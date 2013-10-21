@@ -1,0 +1,22 @@
+{
+  "name": "brandymint-freetile",
+  "description": "jquery-freetile bower package",
+  "version": "1.0.0",
+  "keywords": ["freetile", "jquery", "layout", "sort"],
+  "homepage": "",
+  "author": {
+    "name": "Alexander Mescheryakov",
+    "email": "sib@brandymint.ru",
+    "web": "http://brandymint.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/BrandyMint/Freetile.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT License",
+      "url": "http://opensource.org/licenses/mit-license.html"
+    }
+  ]
+}

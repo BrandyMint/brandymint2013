@@ -5,6 +5,8 @@
 
 $ ->
   #$(".collapse").collapse()
+  $('.j-random-bg').css('background-image', 'url("images/index_background_'+Math.floor((Math.random()*3))+'.jpg")')
+
   userAgent = navigator.userAgent
   android = userAgent.match(/(Android)/g)
   ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
