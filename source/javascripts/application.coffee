@@ -24,23 +24,17 @@ $ ->
       st = $(this).scrollTop()
       if st > 100
         if st >= lastScrollTop || st == 0
-          @showNavbar()
+          APP.Helpers.App.showNavbar()
           # downscroll code
         else
-          @hideNavbar()
+          APP.Helpers.App.hideNavbar()
           # upscroll code
       else
-        #@showNavbar()
+        #APP.Helpers.App.showNavbar()
       lastScrollTop = st
 
   $('.navbar-collapse a')
     .on 'click', (e) ->
       $(@).parents('.navbar-collapse').collapse('toggle')
-      @hideNavbar()
+      APP.Helpers.App.hideNavbar()
 
-
-@showNavbar = ->
-  $('.application-navbar.navbar-fixed-top').delay(200).addClass('transparent')
-
-@hideNavbar = ->
-  $('.application-navbar.navbar-fixed-top').removeClass('transparent')
