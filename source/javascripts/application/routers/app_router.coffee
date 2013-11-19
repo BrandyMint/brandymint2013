@@ -3,4 +3,4 @@ class APP.Routers.App extends Marionette.AppRouter
 
   appRoutes:
     "": "index"
-    "map": "show"
+    "map": "map"

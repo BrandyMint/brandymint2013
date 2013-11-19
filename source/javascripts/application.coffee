@@ -1,9 +1,9 @@
-#= require jquery/jquery
-#= require modernizr/modernizr
-#= require bootstrap
-#= require underscore/underscore
-#= require backbone/backbone
-#= require backbone.marionette/lib/backbone.marionette
+#= require '../vendor/components/jquery/jquery'
+#= require ./vendor/components/modernizr/modernizr
+#= require ./vendor/components/bootstrap
+#= require ./vendor/components/underscore/underscore
+#= require ./vendor/components/backbone/backbone
+#= require ./vendor/components/backbone.marionette/lib/backbone.marionette
 #= require application.init
 #= require_tree ./application/controllers
 #= require_tree ./application/collections
@@ -38,3 +38,6 @@ $ ->
       $(@).parents('.navbar-collapse').collapse('toggle')
       APP.Helpers.App.hideNavbar()
 
+  $(document).on 'click', 'a[data-url]', (e)->
+    APP.Routers.app.navigate( $(this).data('url') )
+    e.preventDefault()
