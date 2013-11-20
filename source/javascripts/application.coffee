@@ -1,9 +1,9 @@
-#= require '../vendor/components/jquery/jquery'
-#= require ./vendor/components/modernizr/modernizr
-#= require ./vendor/components/bootstrap
-#= require ./vendor/components/underscore/underscore
-#= require ./vendor/components/backbone/backbone
-#= require ./vendor/components/backbone.marionette/lib/backbone.marionette
+#= require jquery/jquery
+#= require modernizr/modernizr
+#= require bootstrap
+#= require underscore/underscore
+#= require backbone/backbone
+#= require backbone.marionette/lib/backbone.marionette
 #= require application.init
 #= require_tree ./application/controllers
 #= require_tree ./application/collections
