@@ -38,3 +38,6 @@ $ ->
       $(@).parents('.navbar-collapse').collapse('toggle')
       APP.Helpers.App.hideNavbar()
 
+  $(document).on 'click', 'a[data-url]', (e)->
+    APP.Routers.app.navigate( $(this).data('url') )
+    e.preventDefault()
