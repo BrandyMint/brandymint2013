@@ -1,0 +1,28 @@
+@import variables
+
+.application-footer
+  padding: 30px 0
+  background: $footerBackground
+  color: $grayLighter
+  -webkit-font-smoothing: antialiased
+  h1, h2, h3, h4, h5, h5, h6
+    text-shadow: none
+  a
+    +transition(color 0.2s ease)
+    color: desaturate(lighten($brandColor, 20%), 20%)
+    &:hover
+      color: lighten($brandColor, 30%)
+  hr
+    border-top: 1px solid lighten($footerBackground, 5%)
+.footer-map-block
+  background: darken($footerBackground, 10%)
+  padding: 10px
+  margin-top: 10px
+  ymaps, img
+    max-width: 100%
+  .close
+    text-shadow: none
+    color: $grayLightest
+    &:hover
+      color: #fff
+

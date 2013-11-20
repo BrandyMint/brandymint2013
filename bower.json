@@ -1,0 +1,16 @@
+{
+  "name": "brandymint2014",
+  "version": "0.1",
+  "dependencies": {
+    "jquery": "latest",
+    "jquery-mobile": "latest",
+    "modernizr": "2.6.2",
+    "underscore": "latest",
+    "backbone": "latest",
+    "backbone.marionette": "latest"
+  },
+  "ignore": [
+    "**/.*",
+    "components"
+  ]
+}

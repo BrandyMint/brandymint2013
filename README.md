@@ -1,18 +1,34 @@
-brandymint static site
-=======
+# Brandymint static site
+------
 
-```
-bundle install
-```
+## Development
 
-start server:
+`bundle install` first.
 
-```
-bundle exec middleman
-```
+`bundle exec middleman` starts a server on `0.0.0.0:4567` (liveupdate included).
 
-build static website:
+`bundle exec middleman build --verbose` builds a static site in `build` folder.
 
-```
-bundle exec middleman build
-```
+---
+
+## Data and content
+
+`models` folder contains models.
+
+Data is stored in `data` folder in .yml files — *in process*
+
+Access data in templates with `= data.yml_file.key...` objects, like `= data.projects.first.title`
+
+## Deploy
+
+`cap deploy`
+
+Работает авто-деплой из jenkins-а
+
+---
+
+## What to do?
+- Migrate all data to yml
+- Large texts in markdown (use redcarpet)
+- Locale switch
+- Russian content
