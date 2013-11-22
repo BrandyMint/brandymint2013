@@ -91,7 +91,7 @@ configure :build do
 
   # Clean 'Build' folder clean
   ignore "/javascripts/application/*"
-  ignore "/javascripts/vendor/lib/*"
+  ignore "/javascripts/vendor/*"
   ignore "/stylesheets/vendor/*"
   ignore "/vendor/components/*"
   ignore "*.rb"
