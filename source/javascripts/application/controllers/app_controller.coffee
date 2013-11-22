@@ -1,6 +1,6 @@
 class APP.Controllers.App extends Marionette.Controller
   index: ->
-    console.log 'index'
+    # index route
 
   show: ->
-    console.log 'map'
+    # map route
