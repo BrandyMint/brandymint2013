@@ -21,15 +21,19 @@
     toggle: (e) ->
       e.preventDefault()
       $(@ui.map).collapse "toggle"
+      @
 
     open: ->
       $(@ui.map).collapse "show"
+      @
     
     close: ->
       $(@ui.map).collapse "hide"
+      @
 
     scrollTo: (speed = 500) ->
       $(window).load =>
         $('body').animate({
           scrollTop: $(@ui.map).offset().top
         }, speed)
+      @

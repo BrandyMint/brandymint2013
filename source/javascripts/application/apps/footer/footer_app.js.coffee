@@ -10,8 +10,7 @@
 
     showMap: ->
       mapView = App.request "footer-map"
-      mapView.open()
-      mapView.scrollTo()
+      mapView.open().scrollTo()
   
   App.addInitializer ->
     new FooterApp.Router
