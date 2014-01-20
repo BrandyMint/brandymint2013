@@ -4,14 +4,11 @@
 #= require underscore/underscore
 #= require backbone/backbone
 #= require backbone.marionette/lib/backbone.marionette
-#= require application.init
-#= require_tree ./application/controllers
-#= require_tree ./application/collections
+#= require_tree ./application/config
+#= require application/app
+#= require_tree ./application/entities
+#= require_tree ./application/apps
 #= require_tree ./application/helpers
-#= require_tree ./application/models
-#= require_tree ./application/templates
-#= require_tree ./application/views
-#= require_tree ./application/routers
 
 $ ->
   #$(".collapse").collapse()
@@ -24,10 +21,10 @@ $ ->
       st = $(this).scrollTop()
       if st > 100
         if st >= lastScrollTop || st == 0
-          APP.Helpers.App.showNavbar()
+          Helpers.App.showNavbar()
           # downscroll code
         else
-          APP.Helpers.App.hideNavbar()
+          Helpers.App.hideNavbar()
           # upscroll code
       else
         #APP.Helpers.App.showNavbar()
@@ -36,4 +33,4 @@ $ ->
   $('.navbar-collapse a')
     .on 'click', (e) ->
       $(@).parents('.navbar-collapse').collapse('toggle')
-      APP.Helpers.App.hideNavbar()
+      Helpers.App.hideNavbar()

@@ -15,6 +15,7 @@ gem "middleman-navigation"
 #gem "middleman-core"
 gem 'bootstrap-sass', '3.0.0.0', :require => false, :github => 'thomas-mcdonald/bootstrap-sass'
 gem 'compass-rails', require: false
+gem 'ejs'
 #gem "jquery-rails"
 #gem 'therubyracer'
 gem 'rb-inotify', '~> 0.9', :require => false

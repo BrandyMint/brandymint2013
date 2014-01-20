@@ -1,4 +1,7 @@
-APP.Helpers.App =
+window.Helpers = 
+  App: {}
+  
+window.Helpers.App =
   showNavbar: ->
     $('.application-navbar.navbar-fixed-top').delay(200).addClass('transparent')
 
