@@ -1,1 +1,1 @@
-bundle exec middleman -p 80
+web: bundle exec middleman
