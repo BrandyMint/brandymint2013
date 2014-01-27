@@ -1,0 +1,30 @@
+body.index
+  .page-container
+    //background: rgba(0,0,0,0.3)
+  .page-container-image
+    background: url("#{$images_path}/welcome-bg.jpg") top center
+    background-size: cover
+    min-height: 500px
+
+.welcome-content
+  padding:
+    top: 100px
+    bottom: 2em
+  @media screen and (min-width: $screen-lg)
+    padding:
+      top: 4em
+      bottom: 6em
+
+.welcome-header
+  font-weight: 300
+  //text-shadow: 0 1px 1px rgba(0,0,0,0.2)
+  -webkit-font-smoothing: antialiased
+
+.welcome-header,
+.large-header
+  font:
+    size: 45px
+    weight: 900
+  line-height: 1.3em
+  margin-bottom: 1em
+

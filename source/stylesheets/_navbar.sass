@@ -3,8 +3,8 @@
 @import bootstrap/mixins
 
 .navbar.application-navbar
-  @extend .navbar-inverse
-  background: rgba(0,0,0,0.8)
+  @extend .navbar-default
+  background: $navbarBackgroundColor
   //background: none
   border-bottom: 0
   +transition(opacity 0.2s ease, height 0.2s ease)
@@ -18,6 +18,16 @@
 
   .navbar-toggle
     border: 0
+    display: block
+    &, .icon-bar
+      +transition(background-color 0.2s ease)
+    .icon-bar
+      background-color: $textColor
+    &:hover
+      background: $textColor
+      .icon-bar
+        background-color: $white
+
 
   .nav.navbar-nav
     & > li
@@ -38,7 +48,10 @@
           text-transform: uppercase
           &, &:hover
             border: none
+    @media screen and (min-width: $screen-xs + 1)
+      display: none
     @media screen and (max-width: $screen-xs)
+      display: block
       margin: 0
       width: 100%
       & > li

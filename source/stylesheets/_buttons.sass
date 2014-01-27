@@ -1,0 +1,25 @@
+.btn
+  +border-radius(0)
+
+.btn-primary-outline
+  font:
+    size: 15px
+    weight: 900
+  text-transform: uppercase
+  letter-spacing: 4px
+  display: inline-block
+  min-width: 200px
+  padding: 12px 20px
+  border: 2px solid $linkColor
+  color: $linkColor
+  background: none
+  +transition(background 0.2s ease, border 0.2s ease, color 0.2s ease)
+  -webkit-font-smoothing: antialiased
+  &:hover, &:focus
+    color: #fff
+    background: $textColor
+    border-color: $textColor
+
+.btn-learn-more
+  @media screen and (max-width: $screen-xs)
+    display: block

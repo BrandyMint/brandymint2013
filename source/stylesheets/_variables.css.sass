@@ -2,6 +2,8 @@
 
 @import bootstrap/variables
 
+$images_path: "../images"
+
 $gray: rgb(100,100,100)
 $grayLight: lighten($gray,30%)
 $grayLighter: lighten($gray,40%)
@@ -32,32 +34,31 @@ $blueMuted: adjust-hue(saturate(darken($white,50%),30%), 200%)
 $textColor: $grayDark
 $textColorDark: $grayDarker
 
-
 // bootstrap migrating from 2.3.2 to 3.0.0
-$linkColor: #08c
+$linkColor: #00a0e3
 $linkColorHover: darken($link-color,10%)
 
 $baseFontSize: $font-size-base
+$border-radius-base: 0
 
 $bodyBackground: #fff
 
 $headingsColor: $textColor
 $headingsFontWeight: bold
 
-
-$navbarBackgroundColor: #555
+$navbarBackgroundColor: rgba(0,0,0,0)
 
 $navbarBackgroundTop: $navbarBackgroundColor
 $navbarBackgroundBottom: darken($navbarBackgroundTop,10%)
 
 $navbarText: lighten($textColor,20%)
-$navbarTextShadowColor: rgba(0,0,0,0.3)
+$navbarTextShadowColor: rgba(0,0,0,0)
 $navbarLinkColor: #ddd
 $navbarLinkColorHover: lighten($blueBrandColor, 40%)
 $navbarLinkColorActive: #fff
 //$navbarLinkBackgroundHover: rgba(lighten($navbarBackgroundColor,10%),.5)
 $navbarLinkBackgroundHover: transparent
-$navbarLinkBackgroundActive: rgba(0,0,0,0.25)
+$navbarLinkBackgroundActive: rgba(0,0,0,0)
 
 $btnPrimaryBackground: $blue
 $btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 10%)
