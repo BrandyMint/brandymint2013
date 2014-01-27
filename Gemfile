@@ -11,6 +11,7 @@ gem "therubyracer", :require => 'v8'
 gem "middleman-livereload"
 gem "middleman-google-analytics"
 gem "middleman-navigation"
+gem "middleman-deploy"
 
 #gem "middleman-core"
 gem 'bootstrap-sass', '3.0.0.0', :require => false, :github => 'thomas-mcdonald/bootstrap-sass'

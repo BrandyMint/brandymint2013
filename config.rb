@@ -51,6 +51,13 @@ activate :google_analytics do |ga|
   ga.tracking_id = 'UA-XXXXXXX-X'
 end
 
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true
+end
+
+
 ##############################
 # Pages
 page "*", :layout => "application"
