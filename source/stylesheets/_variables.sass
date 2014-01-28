@@ -1,7 +1,5 @@
 @charset "UTF-8"
 
-@import bootstrap/variables
-
 $images_path: "../images"
 
 $gray: rgb(100,100,100)
@@ -38,7 +36,6 @@ $textColorDark: $grayDarker
 $linkColor: #00a0e3
 $linkColorHover: darken($link-color,10%)
 
-$baseFontSize: $font-size-base
 $border-radius-base: 0
 
 $bodyBackground: #fff
@@ -69,8 +66,8 @@ $hrBorder: #dddddd
 
 $rowHoverBackground:  hsl(200,100%,95%)
 
-
-$blockVerticalPadding: ($container-lg-desktop - (($grid-columns - 1) * $grid-gutter-width)) / $grid-columns
+$blockTitleVerticalMargin: ($container-lg-desktop - (($grid-columns - 1) * $grid-gutter-width)) / $grid-columns
+$blockVerticalPadding: $blockTitleVerticalMargin + $grid-gutter-width
 
 
 

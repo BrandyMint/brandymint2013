@@ -1,7 +1,7 @@
 .btn
   +border-radius(0)
 
-.btn-primary-outline
+=btn-outline($color, $background, $colorHover, $backgroundHover)
   font:
     size: 15px
     weight: 900
@@ -10,15 +10,21 @@
   display: inline-block
   min-width: 200px
   padding: 12px 20px
-  border: 2px solid $linkColor
-  color: $linkColor
-  background: none
   +transition(background 0.2s ease, border 0.2s ease, color 0.2s ease)
   -webkit-font-smoothing: antialiased
+  border: 2px solid $color
+  color: $color
+  background: $background
   &:hover, &:focus
-    color: #fff
-    background: $textColor
-    border-color: $textColor
+    color: $colorHover
+    background: $backgroundHover
+    border-color: $backgroundHover
+
+.btn-primary-outline
+  +btn-outline($linkColor, none, #fff, $textColor)
+
+.btn-outline-white
+  +btn-outline(#fff, none, $textColor, #fff)
 
 .btn-learn-more
   @media screen and (max-width: $screen-xs)

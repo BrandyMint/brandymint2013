@@ -1,0 +1,18 @@
+- projects = data.welcome_projects
+- projects.each_with_index do |p,i|
+  %div{ class: "welcome-project welcome-project-#{p.slug} welcome-project-bg-#{p.background}" }
+    .welcome-project-container-image{ style: "background-image: url('images/projects/#{p.welcome_image}')"}
+      .welcome-project-container
+        .container
+          .row
+            .col-md-6.col-md-offset-3.welcome-project-content
+              %h1.welcome-project-header
+                = p.title
+              .welcome-project-subheader
+                = p.announce
+              %a.welcome-project-btn{ href: '' }
+                Read more
+
+
+
+

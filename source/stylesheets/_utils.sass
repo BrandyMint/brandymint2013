@@ -53,8 +53,8 @@ hr.no-shadow
     margin-#{$margin}: 0
 
 
-@each $color in (green $green), (red $red), (blue $blue), (orange $orange)
-  .color-#{nth($color,1)}
+@each $color in (green $green), (red $red), (blue $blue), (orange $orange), (white #fff)
+  .text-color-#{nth($color,1)}
     color: nth($color,2)
 
 
@@ -102,5 +102,9 @@ hr.no-shadow
       display: inline
       @media screen and (max-width: nth($bp,2))
         display: block
+
+@each $align in left, center, right
+  .text-#{$align}
+    text-align: $align
 
 
