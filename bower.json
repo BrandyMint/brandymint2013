@@ -3,7 +3,8 @@
   "version": "0.1",
   "dependencies": {
     "jquery": "latest",
-    "jquery-mobile": "latest"
+    "jquery-mobile": "latest",
+    "jquery.role": "git://github.com/kossnocorp/role"
   },
   "ignore": [
     "**/.*",

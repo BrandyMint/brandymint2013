@@ -7,7 +7,7 @@
   background: $navbarBackgroundColor
   //background: none
   border-bottom: 0
-  +transition(opacity 0.6s ease, height 0.2s ease, margin 0.6s ease)
+  +transition(opacity 0.6s ease, height 0.2s ease, margin 0.6s ease, background 0.2s ease)
   opacity: 1
   height: auto
   overflow: auto
@@ -20,6 +20,11 @@
   .navbar-toggle
     border: 0
     display: block
+    padding: 20px
+    margin:
+      top: 0
+      left: -20px
+      right: -20px
     &, .icon-bar
       +transition(background-color 0.2s ease)
     .icon-bar
@@ -68,7 +73,17 @@
 
 .navbar-brand-logo
   max-width: 120px
-  margin-top: 12px
+  padding: 12px 20px 15px 20px
+  margin:
+    left: -20px
+    right: -20px
+  +box-sizing(content-box)
+
+.navbar-fixed-item
+  +transition(background 0.4s ease)
+  background: none
+  .navbar-white &
+    background: #fff
 
 
 
