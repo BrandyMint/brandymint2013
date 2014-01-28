@@ -94,10 +94,13 @@ hr.no-shadow
   font-weight: normal
 
 
-@each $bp in (xs $screen-xs, sm $screen-sm, md $screen-md, lg $screen-lg)
+@each $bp in (xs $screen-xs, sm $screen-sm, md $screen-md, lg $screen-lg, all all)
   .linebreak-#{nth($bp,1)}
-    display: inline
-    @media screen and (max-width: nth($bp,2))
+    @if nth($bp,2) == all
       display: block
+    @else
+      display: inline
+      @media screen and (max-width: nth($bp,2))
+        display: block
 
 

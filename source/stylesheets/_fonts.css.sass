@@ -1,9 +1,12 @@
 @import bootstrap/variables
 @import variables
 @import fonts/museo/museo
+@import fonts/pt-serif/pt-serif
 
 $sansFontFamily: 'Museo Sans', 'HelveticaNeue', 'Helvetica', Arial, sans-serif
 $baseFontFamily: $sansFontFamily
+
+$serifFontFamily: 'PT Serif', 'Georgia', 'Geneva', serif
 
 $headingsFontFamily: $sansFontFamily
 
@@ -12,6 +15,7 @@ $baseLineHeight: 19px
 
 $rem: $baseFontSize
 
+$articleFontFamily: $serifFontFamily
 $articleFontSize: $baseFontSize
 $articleFontWeight: normal
 $articleLineHeight: $baseLineHeight
@@ -25,6 +29,12 @@ body, p, h1, h2, h3, h4, h5, h6
 
 body, p
   font-weight: 300
+
+%serif-font
+  font-family: $serifFontFamily
+
+.article-text
+  @extend %serif-font
 
 //body, p
   font-size: $baseFontSize

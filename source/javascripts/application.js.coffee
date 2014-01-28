@@ -30,9 +30,13 @@ $ ->
 
 
 @showNavbar = ->
-  $('.application-navbar.navbar-fixed-top').delay(200).addClass('transparent')
+  #setTimeout(( ->
+  $('.application-navbar.navbar-fixed-top').addClass('transparent')
+  #), 0)
 
 @hideNavbar = ->
+  #setTimeout(( ->
   $('.application-navbar.navbar-fixed-top').removeClass('transparent')
+  #), 0)
 
 
