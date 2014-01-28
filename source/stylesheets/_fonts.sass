@@ -12,6 +12,9 @@ $baseLineHeight: $baseFontSize * 1.6em
 $largeTextFontSize: 36px
 $largeHeaderFontSize: 45px
 
+$largeTextFontSize-xs: $largeTextFontSize / 1.5
+$largeHeaderFontSize-xs: $largeHeaderFontSize / 1.5
+
 $rem: $baseFontSize
 
 $articleFontFamily: $serifFontFamily
@@ -29,11 +32,22 @@ body, p
 %serif-font
   font-family: $serifFontFamily
 
+%large-text
+  font-size: $largeTextFontSize
+  @media screen and (max-width: $screen-xs)
+    font-size: $largeTextFontSize-xs
+
+%large-header
+  font-size: $largeHeaderFontSize
+  font:
+    weight: 900
+  line-height: 1.3em
+  @media screen and (max-width: $screen-xs)
+    font-size: $largeHeaderFontSize-xs
+
 .article-text
   @extend %serif-font
 
-//body, p
-  font-size: $baseFontSize
 
 textarea
   font-size: $rem

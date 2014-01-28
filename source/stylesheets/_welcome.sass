@@ -3,6 +3,17 @@
   background:
     position: top center
     size: cover
+  @media screen and (max-width: $screen-xs)
+    min-height: 350px
+
+%block-vertical-padding
+  padding:
+    top: $blockVerticalPadding
+    bottom: $blockVerticalPadding
+  @media screen and (max-width: $screen-xs)
+  padding:
+    top: $blockVerticalPadding-xs
+    bottom: $blockVerticalPadding-xs
 
 body.index
   .page-container
@@ -13,34 +24,27 @@ body.index
 
 .welcome-content
   padding:
-    top: 100px
+    top: 2.2em
   @media screen and (min-width: $screen-lg)
     padding:
       top: 4em
-      //bottom: 6em
 
 .welcome-header
-  font-weight: 300
-  //text-shadow: 0 1px 1px rgba(0,0,0,0.2)
   -webkit-font-smoothing: antialiased
 
 .welcome-header,
 .large-header
-  font:
-    size: $largeHeaderFontSize
-    weight: 900
-  line-height: 1.3em
+  @extend %large-header
   margin-bottom: 1em
 
 .welcome-block
-  padding:
-    top: $blockVerticalPadding
-    bottom: $blockVerticalPadding
+  @extend %block-vertical-padding
 
 .welcome-whatwedo-block
   @extend %serif-font
-  font-size: $largeTextFontSize
+  @extend %large-text
   line-height: (60px/36px) * 1em
+  margin-bottom: 1em
 
 
 .welcome-project
