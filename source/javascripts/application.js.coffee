@@ -1,5 +1,4 @@
 #= require jquery/jquery.min
-#= require jquery.role
 #= require jquery.role/lib/jquery.role
 #= require bootstrap
 
