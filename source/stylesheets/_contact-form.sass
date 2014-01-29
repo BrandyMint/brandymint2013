@@ -1,0 +1,25 @@
+.contact-form-block
+  @extend %container-image
+  background: $grayLightest
+
+.contact-form
+  input,
+  textarea
+    @extend .form-control
+    +border-radius($border-radius-base)
+    margin: 0
+    border: 0
+    padding: 17px 15px
+    height: auto
+    border-bottom: 1px solid $grayLightest
+    font:
+      size: 20px
+      weight: 300
+    &,
+    &:focus,
+    &:hover,
+    &.active
+      +box-shadow(none)
+    &.btn-success
+      @extend .btn-success
+

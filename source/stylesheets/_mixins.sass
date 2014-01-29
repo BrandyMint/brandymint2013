@@ -1,2 +1,23 @@
 =antialiased
   -webkit-font-smoothing: antialiased
+
+//=placeholder
+  &
+    \::-webkit-input-placeholder
+      @content
+    \:-moz-placeholder
+      @content
+    \::-moz-placeholder
+      @content
+    \:-ms-input-placeholder
+      @content
+
+=large-form-placeholder
+  ::-webkit-input-placeholder
+    color: $grayLighter
+    font:
+      size: 20px
+      weight: 100
+    +antialiased
+
+
