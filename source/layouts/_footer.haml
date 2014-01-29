@@ -22,6 +22,11 @@
         %ul.footer-list.pull-right
           - data.social.each do |social|
             %li
-              %a{ href: "#{social.link}", target: :blank }
+              %a{ href: "#{social.link}", target: :blank, class: "footer-social-link footer-social-link-#{social.title.downcase}" }
+                - if social.icon?
+                  %span.footer-social-logo.icon-color-white= fontello social.icon
+                - elsif social.logo?
+                  %span.footer-social-logo
+                    %img{src: image_path(social.logo)}
                 = social.title
         .clearfix

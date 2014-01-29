@@ -8,11 +8,8 @@
   -webkit-font-smoothing: antialiased
   h1, h2, h3, h4, h5, h5, h6
     text-shadow: none
-  a
-    +transition(color 0.2s ease)
-    color: desaturate(lighten($linkColor, 20%), 20%)
-    &:hover
-      color: lighten($linkColor, 30%)
+  //a
+    +link-colors( desaturate(lighten($linkColor, 20%), 20%), lighten($linkColor, 40%) )
   hr
     border-top: 1px solid lighten($footerBackground, 5%)
   .contacts-link
@@ -29,6 +26,30 @@
     color: $grayLightest
     &:hover
       color: #fff
+
+.footer-social-link
+  font-weight: 500
+  +transition(color 0.2s ease)
+  +link-colors(rgba(#fff, 0.7), #fff)
+  img
+    height: 1.5em
+    display: inline
+    vertical-align: middle
+  .footer-social-logo
+    opacity: 0.7
+    +transition(opacity 0.2s ease)
+  &:hover
+    .footer-social-logo
+      opacity: 1
+
+.footer-social-logo
+  display: inline-block
+  text-align: center
+  width: 2em
+
+.footer-social-link-medium
+  img
+    background: #fff
 
 .footer-list
   padding-left: 0
