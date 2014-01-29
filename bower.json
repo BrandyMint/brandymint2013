@@ -4,7 +4,8 @@
   "dependencies": {
     "jquery": "latest",
     "jquery-mobile": "latest",
-    "jquery.role": "git://github.com/kossnocorp/role"
+    "jquery.role": "git://github.com/kossnocorp/role",
+    "modernizr": "~2.7.1"
   },
   "ignore": [
     "**/.*",

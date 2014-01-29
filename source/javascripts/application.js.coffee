@@ -1,6 +1,7 @@
 #= require jquery/jquery.min
 #= require jquery.role/lib/jquery.role
 #= require bootstrap
+#= require modernizr/modernizr
 
 $ ->
   #$(".collapse").collapse()
@@ -9,7 +10,9 @@ $ ->
   ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
   coverImageHeight = $('@cover-image').height()
   lastScrollTop = 0
-  unless (ios || android)
+  if (ios || android)
+    @appNavbar.addClass('navbar-mobile-device')
+  else
     $(window).on 'scroll', (event) ->
       st = $(this).scrollTop()
       if st > 100
@@ -28,7 +31,7 @@ $ ->
       $(@).parents('.navbar-collapse').collapse('toggle')
       @showNavbar()
 
-@appNavbar = $('.application-navbar.navbar-fixed-top')
+@appNavbar = $('@application-navbar')
 
 @hideNavbar = (st, coverHeight) ->
   setTimeout(( ->

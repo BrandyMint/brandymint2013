@@ -1,4 +1,27 @@
 %footer.application-footer
   %a{ name: 'footer'}
-  -#= partial 'footer'
+  .container
+    .row
+      .col-sm-3
+        %a{href: "#{root_app_path}"}
+          %img.footer-brand-logo{src: image_path("logo_brandymint.svg"), alt: 'Brandymint'}
+        %br
+        %br
+        = link_to 'mailto:hello@brandymint.com', class: 'contacts-link' do
+          %strong hello@brandymint.com
+        %br
+        %br
+        = link_to 'tel:+79033891228', class: 'contacts-link' do
+          %small +7 903 389 12 28
 
+      .col-sm-6
+        %ul.footer-list
+          - data.services.each do |s|
+            %li= s
+      .col-sm-3
+        %ul.footer-list.pull-right
+          - data.social.each do |social|
+            %li
+              %a{ href: "#{social.link}", target: :blank }
+                = social.title
+        .clearfix
