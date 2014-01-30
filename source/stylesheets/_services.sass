@@ -30,10 +30,19 @@
 .services-subheader
   margin-bottom: -0.4em
 
+
 .services-page-services-list
-  padding-left: 0
-  li
-    list-style-type: none
-    margin-bottom: 1em
-    line-height: 1.1em
+  @extend %unstyled-list
+  .service-item
+    margin-bottom: 3em
+  .service-title
+    @extend %large-header
+  .service-description
+    @extend %serif-font
+    font-size: $rem * 0.85
+    line-height: $baseLineHeight
+    color: $gray
+    li
+      margin-bottom: 0.5em
+
 

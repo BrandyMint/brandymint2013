@@ -23,12 +23,20 @@ body_class: services-page
               Services we provide
 
 .container
-  .welcome-block.welcome-whatwedo-block
+  .welcome-block
     .row
       .col-sm-8.col-sm-offset-2
-        %ul.services-page-services-list
+        .services-page-services-list
           - data.services.each do |s|
-            %li= s
+            .service-item
+              %h3.service-title= s.title
+              %ul.service-description.unstyled-list
+                - s.items.each_with_index do |item, i|
+                  %li= item
+
+
+
+
 
 
       -#
