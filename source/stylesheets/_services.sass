@@ -1,10 +1,11 @@
 .services-container-image
   @extend %container-image
   +bgImage("services-bg.jpg")
-  +coverImageHeight
-  min-height: auto
+  //+coverImageHeight
+  min-height: $coverImageHeight / 2.5
   background:
-    position: top center
+    // position: top center
+    position: center bottom
   position: relative
 
 .services-content
@@ -28,7 +29,8 @@
   left: inherit
 
 .services-subheader
-  margin-bottom: -0.4em
+  @extend %extra-large-header
+  margin-bottom: -0.35em
 
 
 .services-page-services-list
