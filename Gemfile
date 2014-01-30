@@ -23,6 +23,10 @@ gem "sass", ">= 3.2"
 #gem 'therubyracer'
 gem 'rb-inotify', '~> 0.9', :require => false
 
+#gem 'middleman-pry'
+
+
+
 group :deploy do
    gem 'capistrano', :require => false
 end

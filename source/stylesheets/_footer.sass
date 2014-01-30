@@ -1,5 +1,9 @@
 @import variables
 
+footer
+  a
+    +link-colors( desaturate(lighten($linkColor, 20%), 20%), lighten($linkColor, 40%) )
+
 .application-footer
   font-size: 0.85em
   padding: $grid-gutter-width*2 0
@@ -8,8 +12,6 @@
   -webkit-font-smoothing: antialiased
   h1, h2, h3, h4, h5, h5, h6
     text-shadow: none
-  //a
-    +link-colors( desaturate(lighten($linkColor, 20%), 20%), lighten($linkColor, 40%) )
   hr
     border-top: 1px solid lighten($footerBackground, 5%)
   .contacts-link

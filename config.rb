@@ -62,6 +62,9 @@ end
 # Pages
 page "*", :layout => "application"
 
+#page:
+#  proxy "/#{link}.html", "/demo.html", :locals => { :src => link, :next_link => next_link, :skip_this => skip_this }
+
 
 ##############################
 # Dynamically Generated Pages
