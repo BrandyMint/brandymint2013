@@ -1,10 +1,9 @@
 %container-image
-  min-height: 500px
   background:
     position: top center
     size: cover
-  @media screen and (max-width: $screen-xs)
-    min-height: 350px
+    repeat: no-repeat
+  +coverImageHeight
 
 %block-vertical-padding
   padding:
@@ -20,7 +19,9 @@ body.index
     //background: rgba(0,0,0,0.3)
   .page-container-image
     @extend %container-image
-    background: url("#{$images_path}/welcome-bg.jpg") top center
+    +bgImage("welcome-bg.jpg")
+    background:
+      position: top center
 
 .welcome-content
   padding:

@@ -45,6 +45,12 @@ body, p
   @media screen and (max-width: $screen-xs)
     font-size: $largeHeaderFontSize-xs
 
+%large-header-serif
+  font-size: $largeHeaderFontSize * 0.85
+  @media screen and (max-width: $screen-xs)
+    font-size: $largeHeaderFontSize-xs * 0.85
+
+
 .article-text
   @extend %serif-font
 

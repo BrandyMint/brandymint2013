@@ -1,0 +1,52 @@
+---
+body_class: services-page
+---
+
+
+
+
+.services-container-image{role: 'cover-image'}
+  .page-container
+    .container
+      .row
+        .col-sm-9.col-sm-offset-2
+          .services-content
+            %h1.services-header
+              We create and improve digital products:
+              %br
+              define, develop, test, make better.
+    .services-subheader-block
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2
+            %h2.services-subheader
+              Services we provide
+
+.container
+  .welcome-block.welcome-whatwedo-block
+    .row
+      .col-sm-8.col-sm-offset-2
+        %ul.services-page-services-list
+          - data.services.each do |s|
+            %li= s
+
+
+      -#
+        We help you to reveal 
+        %em possibilities
+        -#.linebreak-all
+        and
+        %em constraints
+        and turn them into digital products.
+        -#.linebreak-all
+        Starting with a prototype, we iterate,
+        -#.linebreak-all
+        come to a
+        %em common vision
+        with you and build
+        %em better products.
+        This is how we create solutions to improve your
+        %em customer experience.
+
+
+

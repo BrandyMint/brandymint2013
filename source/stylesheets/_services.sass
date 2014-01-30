@@ -1,0 +1,39 @@
+.services-container-image
+  @extend %container-image
+  +bgImage("services-bg.jpg")
+  +coverImageHeight
+  min-height: auto
+  background:
+    position: top center
+  position: relative
+
+.services-content
+  @extend .welcome-content
+
+.services-header,
+.services-subheader
+  @extend .welcome-header
+  color: #fff
+
+.services-header
+  @extend %serif-font
+  @extend %large-header-serif
+  font-weight: normal
+  margin-top: 1em
+
+.services-subheader-block
+  position: absolute
+  width: 100%
+  bottom: 0
+  left: inherit
+
+.services-subheader
+  margin-bottom: -0.4em
+
+.services-page-services-list
+  padding-left: 0
+  li
+    list-style-type: none
+    margin-bottom: 1em
+    line-height: 1.1em
+

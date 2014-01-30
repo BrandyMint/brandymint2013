@@ -20,4 +20,11 @@
       weight: 100
     +antialiased
 
+=bgImage($image, $imgsPath: $imagesPath)
+  background-image: url("#{$imgsPath}/#{$image}")
+
+=coverImageHeight($height: $coverImageHeight, $height-xs: $coverImageHeight-xs)
+  min-height: $height
+  @media screen and (max-width: $screen-xs)
+    min-height: $height-xs
 
