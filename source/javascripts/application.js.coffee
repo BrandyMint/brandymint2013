@@ -31,6 +31,14 @@ $ ->
       $(@).parents('.navbar-collapse').collapse('toggle')
       @showNavbar()
 
+
+  navbarMenuBlock = $('@navbar-menu')
+  navbarToggleBtn = $('@navbar-toggle-button')
+  navbarToggleBtn.on 'click', () ->
+    $(@).toggleClass 'navbar-toggle-active'
+    navbarMenuBlock.toggleClass('active')
+
+
 @appNavbar = $('@application-navbar')
 
 @hideNavbar = (st, coverHeight) ->

@@ -1,23 +1,24 @@
 .navbar.application-navbar.navbar-fixed-top{role: 'application-navbar'}
   .container
-    %a.pull-left{href: "#{root_app_path}"}
+    %a.pull-left{href: url_for('/')}
       %img.navbar-brand-logo.navbar-fixed-item{src: image_path("logo_brandymint_black.svg"), alt: 'Brandymint'}
     
-    %button.navbar-toggle.navbar-fixed-item{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
+    %button.navbar-toggle.navbar-fixed-item{type: "button", role: "navbar-toggle-button"}
+      .icon-bar-btn
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
 
-    .navbar-collapse.collapse
-      %ul.nav.navbar-nav.pull-right
-        -#%li.active
-          %a{href: "#"} Home
+
+    -#.navbar-collapse.collapse
+    %ul.nav.navbar-nav.pull-right.navbar-menu-block.navbar-fixed-item{ role: 'navbar-menu' }
+      -#%li.active
+        %a{href: "#"} Home
+      - data.navigation.each do |n|
         %li
-          %a{href: "#{root_app_path}#projects"} Our work
-        %li
-          %a{href: "#{root_app_path}#contacts"} Contact us
-        %li
-          = partial 'hire_us'
+          = link_to n.title, url_for(n.page)
+      -#%li
+        = partial 'hire_us'
     .clearfix
 
 

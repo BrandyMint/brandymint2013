@@ -1,9 +1,7 @@
-@import variables
-@import mixins
-@import bootstrap/mixins
+$navbarHideHeight: 80px
 
 .navbar.application-navbar
-  @extend .navbar-default
+  //@extend .navbar-default
   background: $navbarBackgroundColor
   //background: none
   border-bottom: 0
@@ -15,7 +13,7 @@
     opacity: 0
     height: 0
     overflow: hidden
-    margin-top: - 50px
+    margin-top: - $navbarHideHeight
 
   .navbar-toggle
     border: 0
@@ -29,23 +27,35 @@
       +transition(background-color 0.2s ease)
     .icon-bar
       background-color: $textColor
-    &:hover
-      background: $textColor
+    &:hover,
+    &.navbar-toggle-active
+      background: #000
       .icon-bar
         background-color: $white
 
+  .navbar-menu-block
+    +transition(opacity 0.6s ease, height 0.2s ease, margin 0.6s ease, background 0.2s ease)
+    margin:
+      top: - $navbarHideHeight
+      right: 20px
+    &.active
+      margin-top: 0
 
   .nav.navbar-nav
     & > li
       & > a
-        color: $grayLightest
-        font-weight: 700
+        color: $textColor
+        font:
+          weight: 700
+          size: $baseFontSize * 0.85
         -webkit-font-smoothing: antialiased
         +transition(color 0.2s ease, background 0.2s ease)
         background: none
+        padding:
+          top: 18px
+          bottom: 16px
         &:hover
-          color: $brandColor
-          background: rgba(0,0,0,0.3)
+          color: $linkColor
         &.btn-hire-us
           @extend .btn
           @extend .btn-success
@@ -54,8 +64,6 @@
           text-transform: uppercase
           &, &:hover
             border: none
-    @media screen and (min-width: $screen-xs + 1)
-      display: none
     @media screen and (max-width: $screen-xs)
       display: block
       margin: 0
@@ -68,8 +76,8 @@
           text-align: center
           &.btn-hire-us
             display: block
-  .navbar-collapse.in
-    //background: rgba(0,0,0,0.3)
+  //.navbar-collapse
+    //&.in
 
 .navbar-brand-logo
   max-width: 120px
