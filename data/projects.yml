@@ -16,7 +16,6 @@
     6: Data segments and filters
   technologies:
     1: Ruby on Rails
-    2: Erlang
     3: Sinatra
     4: Websockets
     5: Faye

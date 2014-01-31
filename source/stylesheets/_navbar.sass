@@ -1,19 +1,25 @@
 $navbarHideHeight: 80px
 
+=navbarHide
+  +translateY(-80px)
+
+=navbarShow
+  +translateY(0)
+
+=navbarTransition
+  +transition(transform 0.6s ease, opacity 0.6s ease, background 0.6s ease)
+
 .navbar.application-navbar
-  //@extend .navbar-default
   background: $navbarBackgroundColor
-  //background: none
   border-bottom: 0
-  +transition(opacity 0.6s ease, height 0.2s ease, margin 0.6s ease, background 0.2s ease)
+  +navbarTransition
+  +navbarShow
   opacity: 1
-  height: auto
   overflow: auto
   &.transparent
     opacity: 0
-    height: 0
     overflow: hidden
-    margin-top: - $navbarHideHeight
+    +navbarHide
 
   .navbar-toggle
     border: 0
@@ -34,12 +40,12 @@ $navbarHideHeight: 80px
     //&.navbar-toggle-active
 
   .navbar-menu-block
-    +transition(opacity 0.6s ease, height 0.2s ease, margin 0.6s ease, background 0.2s ease)
+    +navbarTransition
+    +navbarHide
     margin:
-      top: - $navbarHideHeight
       right: 20px
     &.active
-      margin-top: 0
+      +navbarShow
 
   .nav.navbar-nav
     & > li
@@ -94,8 +100,9 @@ $navbarHideHeight: 80px
   background: none
   .navbar-white &,
   .navbar-mobile-device &,
-  .services-page &
-    background: #fff
+  .services-page &,
+  .contact-page &
+    background: rgba(#fff, 0.9)
 
 
 
