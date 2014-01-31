@@ -2,11 +2,14 @@
   @extend %container-image
   +bgImage("services-bg.jpg")
   //+coverImageHeight
-  min-height: $coverImageHeight / 2.5
+  //min-height: $coverImageHeight / 2.5
+  min-height: $coverImageHeight / 4
   background:
     // position: top center
     position: center bottom
   position: relative
+  .page-container
+    padding-top: 0
 
 .services-content
   @extend .welcome-content
@@ -15,6 +18,7 @@
 .services-subheader
   @extend .welcome-header
   color: #fff
+
 
 .services-header
   @extend %serif-font
@@ -33,7 +37,7 @@
   margin-bottom: -0.35em
 
 
-.services-page-services-list
+//.services-page-services-list
   @extend %unstyled-list
   .service-item
     margin-bottom: 3em
@@ -46,5 +50,23 @@
     color: $gray
     li
       margin-bottom: 0.5em
+
+.services-block-compact
+  .services-page-services-list
+    @extend %unstyled-list
+    .service-item
+      margin-bottom: 1em
+    .service-title
+      @extend %compact-header
+      //margin-bottom: 0.5em
+    .service-description
+      @extend %serif-font
+      @extend %compact-text
+      color: $gray
+      li
+        display: inline-block
+        margin:
+          right: 1.5em
+          bottom: 0.5em
 
 

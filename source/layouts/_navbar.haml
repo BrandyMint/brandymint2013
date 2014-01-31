@@ -3,7 +3,7 @@
     %a.pull-left{href: url_for('/')}
       %img.navbar-brand-logo.navbar-fixed-item{src: image_path("logo_brandymint_black.svg"), alt: 'Brandymint'}
     
-    %button.navbar-toggle.navbar-fixed-item{type: "button", role: "navbar-toggle-button"}
+    %button.navbar-toggle.navbar-fixed-item{type: "button", role: "navbar-toggle-button", 'data-state' => current_page.data.navbar_state || ''}
       .icon-bar-btn
         %span.icon-bar
         %span.icon-bar
@@ -11,11 +11,15 @@
 
 
     -#.navbar-collapse.collapse
-    %ul.nav.navbar-nav.pull-right.navbar-menu-block.navbar-fixed-item{ role: 'navbar-menu' }
+    %ul.nav.navbar-nav.pull-right.navbar-menu-block.navbar-fixed-item{ role: 'navbar-menu'}
       -#%li.active
         %a{href: "#"} Home
       - data.navigation.each do |n|
-        %li
+        - if current_page.url.gsub('/','') == url_for(n.page).gsub('/','')
+          - state = 'active'
+        - else
+          - state = ''
+        %li{class: state}
           = link_to n.title, url_for(n.page)
       -#%li
         = partial 'hire_us'

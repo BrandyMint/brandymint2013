@@ -27,11 +27,11 @@ $navbarHideHeight: 80px
       +transition(background-color 0.2s ease)
     .icon-bar
       background-color: $textColor
-    &:hover,
-    &.navbar-toggle-active
-      background: #000
+    &:hover
+      background: $linkColor
       .icon-bar
         background-color: $white
+    //&.navbar-toggle-active
 
   .navbar-menu-block
     +transition(opacity 0.6s ease, height 0.2s ease, margin 0.6s ease, background 0.2s ease)
@@ -54,7 +54,7 @@ $navbarHideHeight: 80px
         padding:
           top: 18px
           bottom: 16px
-        &:hover
+        &:hover,
           color: $linkColor
         &.btn-hire-us
           @extend .btn
@@ -64,6 +64,8 @@ $navbarHideHeight: 80px
           text-transform: uppercase
           &, &:hover
             border: none
+      &.active > a
+        +link-colors($linkColor)
     @media screen and (max-width: $screen-xs)
       display: block
       margin: 0
@@ -93,7 +95,7 @@ $navbarHideHeight: 80px
   .navbar-white &,
   .navbar-mobile-device &,
   .services-page &
-    background: rgba(#fff, 0.9)
+    background: #fff
 
 
 

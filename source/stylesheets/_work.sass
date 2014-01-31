@@ -1,6 +1,7 @@
-@import bootstrap/mixins
-@import mixins
-@import variables
+.work-page
+  @extend .welcome-block
+  &, p
+    @extend %compact-text
 
 .projects-header-image
   background: url('../images/background_blurred200.jpg') top left
@@ -57,7 +58,6 @@
   & > span
     font-size: 17px
     line-height: 42px
-    font-weight: 700
     padding: 6px 10px
     margin-right: 10px
     border: 1px solid $grayLightest

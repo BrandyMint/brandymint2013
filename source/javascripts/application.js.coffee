@@ -38,6 +38,11 @@ $ ->
     $(@).toggleClass 'navbar-toggle-active'
     navbarMenuBlock.toggleClass('active')
 
+  # if navbarToggleBtn.data('state') == 'active'
+  unless $('body').attr('class') == 'welcome index'
+     navbarToggleBtn.addClass 'navbar-toggle-active'
+     navbarMenuBlock.addClass('active')
+
 
 @appNavbar = $('@application-navbar')
 
