@@ -27,6 +27,23 @@
     2: Domain-driven development
     3: Scrum
 -
+  slug: rocketwash
+  title: Rocketwash
+  image: 'rocketwash.jpg'
+  description: |
+    We like cases when modern technologies help you in everyday life.
+    Rocketwash is a service which provides you ordering a carwash from iOS and Android smartphone.
+  features:
+    1: PhoneGap development
+  technologies:
+    1: CoffeeScript
+    2: Backbone
+    3: Marionette
+  methodologies:
+    1: Test-driven development
+    2: Scrum
+
+-
   slug: clickavia
   logo: clickavia_logo.svg
   url: 'http://clickavia.ru/'
@@ -161,3 +178,23 @@
     1: iOS Development
   methodologies:
     1: Scrum
+
+-
+  slug: riolis
+  title: Riolis
+  image: 'riolis.jpg'
+  description: |
+    Riolis is well-known by its embroidery kits.
+    We developed API for mobile apps, prototyped, designed and created iPhone, iPad and Android versions.
+  features:
+    1: API for mobile apps
+    2: Rapid prototyping
+    3: Mobile caching
+  technologies:
+    1: iOS development
+    2: Android development
+    3: Backend development
+  methodologies:
+    1: Scrum
+    2: Agile
+
