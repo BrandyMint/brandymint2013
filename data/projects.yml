@@ -197,4 +197,30 @@
   methodologies:
     1: Scrum
     2: Agile
+-
+  slug: kribrum
+  title: Kribrum
+  image: 'kribrum.jpg'
+  description: |
+    iPad app for Kribrum, social media and news monitoring service built for enterprise use.
+  features:
+    1: PhoneGap development
+  technologies:
+    1: Backbone
+    2: Marionette
+  methodologies:
+    1: Scrum
+    2: Agile
+-
+  slug: villanakipre
+  title: Villanakipre.ru
+  image: 'villanakipre.jpg'
+  description: |
+    Backend development for Villanakipre.ru, website focused on realty rent and sale on Cyprus.
+  features:
+    1: Advanced search engine
+  technologies:
+    1: Ruby on Rails
+  methodologies:
+    1: Search engine with domain–driven design
 
