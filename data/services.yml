@@ -12,14 +12,20 @@
     - JavaScript (CoffeeScript, Backbone, Marionette, jQuery)
 
 -
-  title: Code quality improvement
+  title: Code improvement
   items:
     -
-      Code analysis
+      Code audit and optimization
     -
-      Refactoring
+      Code review
+    -
+      Deep refactoring
     -
       Performance optimization
+    -
+      Web projects maintenance
+    -
+      Test automation
 
 -
   title: Mobile development

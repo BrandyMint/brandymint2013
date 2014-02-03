@@ -25,6 +25,12 @@ body_class: services-page
   .services-block-compact
     .row
       .col-sm-8.col-sm-offset-2
+        %small.serif-font
+          - data.services_description.each do |d|
+            = d
+  .services-block-compact
+    .row
+      .col-sm-8.col-sm-offset-2
         .services-page-services-list
           - data.services.each do |s|
             .service-item
