@@ -8,11 +8,27 @@ $ ->
   userAgent = navigator.userAgent
   android = userAgent.match(/(Android)/g)
   ios = userAgent.match(/(iPhone)/g) || userAgent.match(/(iPad)/g)
-  coverImageHeight = $('@cover-image').height()
-  lastScrollTop = 0
-  if (ios || android)
-    @appNavbar.addClass('navbar-mobile-device')
+  if ios || android || $(window).width() <= 640
+    @isMobile = true
   else
+    @isMobile = false
+
+  coverImageHeight = $('@cover-image').height()
+
+  navbarMenuBlock = $('@navbar-menu')
+  navbarToggleBtn = $('@app-nav-toggle-button')
+  navbarToggleBtn.on 'click', () ->
+    $(@).toggleClass 'app-nav-toggle-active'
+    navbarMenuBlock.toggleClass('active')
+
+  lastScrollTop = 0
+  if @isMobile == true
+    @appNavbar.addClass('navbar-mobile-device')
+    navbarMenuBlock.removeClass 'active'
+  else
+    unless $('body').hasClass('hide-navbar-menu')
+       navbarToggleBtn.addClass 'app-nav-toggle-active'
+       navbarMenuBlock.addClass('active')
     $(window).on 'scroll', (event) ->
       st = $(this).scrollTop()
       if st > 100
@@ -25,24 +41,6 @@ $ ->
       else
         #@hideNavbar()
       lastScrollTop = st
-
-  $('.navbar-collapse a')
-    .on 'click', (e) ->
-      $(@).parents('.navbar-collapse').collapse('toggle')
-      @showNavbar()
-
-
-  navbarMenuBlock = $('@navbar-menu')
-  navbarToggleBtn = $('@navbar-toggle-button')
-  navbarToggleBtn.on 'click', () ->
-    $(@).toggleClass 'navbar-toggle-active'
-    navbarMenuBlock.toggleClass('active')
-
-  # if navbarToggleBtn.data('state') == 'active'
-  unless $('body').hasClass('hide-navbar-menu')
-     navbarToggleBtn.addClass 'navbar-toggle-active'
-     navbarMenuBlock.addClass('active')
-
 
 @appNavbar = $('@application-navbar')
 

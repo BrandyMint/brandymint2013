@@ -1,7 +1,9 @@
 $navbarHideHeight: 80px
+$navbarMenuZindex-xs: 1100
+$navbarToggleZindex-xs: 1200
 
 =navbarHide
-  +translateY(-80px)
+  +translateY(-100%)
 
 =navbarShow
   +translateY(0)
@@ -13,79 +15,34 @@ $navbarHideHeight: 80px
   background: $navbarBackgroundColor
   border-bottom: 0
   +navbarTransition
-  +navbarShow
   opacity: 1
-  overflow: auto
   &.transparent
     opacity: 0
-    overflow: hidden
     +navbarHide
 
-  .navbar-toggle
-    border: 0
-    display: block
-    padding: 20px
-    margin:
-      top: 0
-      left: -20px
-      right: -20px
-    &, .icon-bar
-      +transition(background-color 0.2s ease)
+.navbar-toggle.app-nav-toggle
+  border: 0
+  display: block
+  padding: 20px
+  margin:
+    top: 0
+    left: -20px
+    right: -20px
+  &, .icon-bar
+    +transition(background-color 0.2s ease)
+  .icon-bar
+    background-color: $textColor
+  &:hover
+    background: $linkColor
     .icon-bar
-      background-color: $textColor
-    &:hover
-      background: $linkColor
-      .icon-bar
-        background-color: $white
-    //&.navbar-toggle-active
-
-  .navbar-menu-block
-    +navbarTransition
-    +navbarHide
-    margin:
-      right: 20px
-    &.active
-      +navbarShow
-
-  .nav.navbar-nav
-    & > li
-      & > a
-        color: $textColor
-        font:
-          weight: 700
-          size: $baseFontSize * 0.85
-        -webkit-font-smoothing: antialiased
-        +transition(color 0.2s ease, background 0.2s ease)
-        background: none
-        padding:
-          top: 18px
-          bottom: 16px
-        &:hover,
-          color: $linkColor
-        &.btn-hire-us
-          @extend .btn
-          @extend .btn-success
-          margin-top: 9px
-          font-weight: bold
-          text-transform: uppercase
-          &, &:hover
-            border: none
-      &.active > a
-        +link-colors($linkColor)
-    @media screen and (max-width: $screen-xs)
-      display: block
-      margin: 0
-      width: 100%
-      & > li
-        & > a
-          margin: 10px auto
-          padding: 10px
-          display: block
-          text-align: center
-          &.btn-hire-us
-            display: block
-  //.navbar-collapse
-    //&.in
+      background-color: $white
+  //&.app-nav-toggle-active
+  @media screen and (max-width: $screen-xs)
+    top: 0
+    right: 0
+    margin-right: 0
+    position: fixed
+    z-index: $navbarToggleZindex-xs
 
 .navbar-brand-logo
   max-width: 120px
@@ -95,15 +52,67 @@ $navbarHideHeight: 80px
     right: -20px
   +box-sizing(content-box)
 
-.navbar-fixed-item
-  +transition(background 0.4s ease)
+.navbar-brand-logo-link
+  @media screen and (max-width: $screen-xs)
+    display: block
+    top: 0
+    position: fixed
+    z-index: $navbarToggleZindex-xs
+
+.app-nav
+  +transformsFix
+  +navbarTransition
+  +navbarHide
+  margin:
+    right: 19px
+  &.active
+    +navbarShow
+    @media screen and (max-width: $screen-xs)
+      position: fixed
+      background: #fff !important
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      padding-top: 3em
+
+.app-nav-item
+  display: inline-block
+  +link-colors($textColor, $linkColor)
+  font:
+    weight: 700
+    size: $baseFontSize * 0.85
+  -webkit-font-smoothing: antialiased
+  +transition(color 0.2s ease, background 0.2s ease)
   background: none
+  padding:
+    top: 9px
+    bottom: 10px
+    left: 1em
+    right: 1em
+  &.active
+    +link-colors($linkColor)
+  .app-nav.active &
+    @media screen and (max-width: $screen-xs)
+      display: block
+      +box-sizing(border-box)
+      text-align: center
+      padding:
+        top: 1em
+        bottom: 1em
+
+
+=navbar-fixed-item-bg
+  background: rgba(#fff, 0.9)
+
+.navbar-fixed-item
+  background: none
+  @media screen and (max-width: $screen-sm)
+    +navbar-fixed-item-bg
   .body-navbar-white &,
   .navbar-white &,
-  .navbar-mobile-device &,
   .services-page &,
-  .contact-page &
-    background: rgba(#fff, 0.9)
-
-
+  .contact-page &,
+  .navbar-mobile-device &
+    +navbar-fixed-item-bg
 
