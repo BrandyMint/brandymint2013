@@ -4,6 +4,7 @@ navbar_state: active
 ---
 
 .work-page
+  = partial 'welcome/projects'
   - projects = data.projects
   - projects.each_with_index do |p,i|
     .container

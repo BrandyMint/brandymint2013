@@ -1,0 +1,59 @@
+-
+  slug: clickavia
+  title: Clickavia
+  logo: clickavia_logo.svg
+  url: 'http://clickavia.ru/'
+  image: 'clickavia.jpg'
+  welcome_image: 'clickavia-welcome-bg.jpg'
+  background: dark
+  announce: Comfortable service to find and buy airline tickets, <br/> running on modern platform
+  description: |
+    Clickavia provides 
+    __comfortable service to find and buy airline tickets__.
+    These great folks asked to analyze existing codebase and refactor some modules to rise code quality level at first.
+    Later they offered us to develop mobile applications so their customers could search and buy tickets everywhere they go.
+    That work included separate
+    __server-side API__
+    and iPhone/iPad applications (now in alpha).
+  features:
+    1: Code review
+    2: Refactoring (ruby)
+    3: Backend separation
+    4: Server-side API
+    5: iOS development
+  technologies:
+    1: Ruby
+    2: Objective-C
+  methodologies:
+    1: Rapid prototyping
+    2: Scrum
+
+  story:
+    part1:
+      title: Behind the shiny interface
+      content: |
+        In 2013 we were asked by Clickavia CTO Pavel Bubentsov to review project architecture and code.
+        The company was running quite well while there were some technical problems about its futher development and extension.
+        We checked metrics and took a look at architecture: the codebase needed some optimization.
+        <br><br>
+        We reconsidered the system with Domain–driven design approach and GRASP/SOLID principles.
+        Then made refactoring, separated the project into two applications so the code became much cleaner and easy to understand.
+        This essentially accelerated and simplified overall project development.
+        Codeclimate GPA was improved from 1.8 to 3.0.
+      image: work/clickavia/codeclimate.png
+      image_block_class: codeclimate-block
+
+    part3:
+      title: Tap is the new click
+      content: |
+        Travel industry is growing really fast and many companies already offer ordering tickets via smartphone or tablet.
+        So it was quite logical decision for Clickavia to create iPhone and iPad apps. As we use lean approach we created
+        clickable lo-fi prototypes that helped us to define project objectives on the first stage.
+      image: work/clickavia/iphone-prototype.png
+      image_block_class: clickavia-iphone-prototype-block
+
+
+
+
+
+

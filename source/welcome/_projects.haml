@@ -1,20 +1,6 @@
-- projects = data.welcome_projects
-- projects.each_with_index do |p,i|
-  %div{ class: "welcome-project welcome-project-#{p.slug} welcome-project-bg-#{p.background}" }
-    .welcome-project-container-image{ style: "background-image: url('images/projects/#{p.welcome_image}')"}
-      .welcome-project-container
-        .container
-          .row
-            .col-md-8.col-md-offset-2.welcome-project-content
-              %h2.welcome-project-header
-                = p.title
-              .welcome-project-subheader
-                = p.announce
-              %a.welcome-project-btn{ href: '' }
-                Read more
-.welcome-block
-  .container
-    .row
-      .col-md-8.col-md-offset-2.text-center
-        = link_to 'more projects', url_for('work'), class: 'btn btn-primary-outline'
+- projects_data = data.work
+- projects_data.each do |f|
+  = partial 'work/welcome_project_block', locals: {p: f[1][0]}
+
+
 

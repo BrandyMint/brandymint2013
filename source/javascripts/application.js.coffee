@@ -39,7 +39,7 @@ $ ->
     navbarMenuBlock.toggleClass('active')
 
   # if navbarToggleBtn.data('state') == 'active'
-  unless $('body').attr('class') == 'welcome index'
+  unless $('body').hasClass('hide-navbar-menu')
      navbarToggleBtn.addClass 'navbar-toggle-active'
      navbarMenuBlock.addClass('active')
 

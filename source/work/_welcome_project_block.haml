@@ -1,0 +1,14 @@
+- p = locals[:p]
+%div{ class: "welcome-project welcome-project-#{p.slug} welcome-project-bg-#{p.background}" }
+  .welcome-project-container-image{ style: "background-image: url('images/projects/#{p.welcome_image}')"}
+    .welcome-project-container
+      .container
+        .row
+          .col-md-8.col-md-offset-2.welcome-project-content
+            %h2.welcome-project-header
+              = p.title
+            .welcome-project-subheader
+              = p.announce
+            = link_to url_for("work/#{p.slug}"), class: 'welcome-project-btn' do
+              Read more
+

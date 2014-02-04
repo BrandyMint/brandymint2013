@@ -103,6 +103,7 @@ configure :build do
   ignore "/javascripts/application/*"
   ignore "/javascripts/vendor/lib/*"
   ignore "/stylesheets/vendor/*"
+  ignore "/stylesheets/app/*"
   ignore "/vendor/components/*"
   ignore "*.rb"
 
