@@ -36,3 +36,6 @@ body_class: body-navbar-white hide-navbar-menu
           %div{ class: "story-image #{part.image_block_class || '' } "}
             %img{src: image_path(part.image)}
 
+= partial 'shared/contact_form', locals: {title: 'Interested? Drop us a line'}
+
+
