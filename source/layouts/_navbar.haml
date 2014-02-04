@@ -15,7 +15,7 @@
       -#%li.active
         %a{href: "#"} Home
       - data.navigation.each do |n|
-        - if current_page.url.gsub('/','') == url_for(n.page).gsub('/','')
+        - if current_page.url.gsub('/','').match( url_for(n.page).gsub('/','') )
           - state = 'active'
         - else
           - state = ''
