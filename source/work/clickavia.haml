@@ -25,13 +25,14 @@ body_class: body-navbar-white
     - p.story.each do |s|
       - part = s[1]
       .work-story-part
-        .row
-          .col-md-8.col-md-offset-2
-            - if part.title?
-              %h2.work-story-header
-                = part.title
-            - if part.content?
-              .article-text= part.content
+        .container
+          .row
+            .col-md-8.col-md-offset-2
+              - if part.title?
+                %h2.work-story-header
+                  = part.title
+              - if part.content?
+                .article-text= part.content
         - if part.image?
           %div{ class: "story-image #{part.image_block_class || '' } "}
             %img{src: image_path(part.image)}
